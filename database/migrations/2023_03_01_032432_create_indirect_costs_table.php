@@ -15,6 +15,10 @@ class CreateIndirectCostsTable extends Migration
     {
         Schema::create('indirect_costs', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('product_id')->constrained();
+            $table->foreignId('cost_item_id')->constrained();
+            $table->double('quantity',8,2);
+            $table->double('amount',8,2);
             $table->timestamps();
         });
     }

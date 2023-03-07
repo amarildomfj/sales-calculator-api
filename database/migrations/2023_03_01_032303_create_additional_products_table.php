@@ -15,6 +15,8 @@ class CreateAdditionalProductsTable extends Migration
     {
         Schema::create('additional_products', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->double('amount',8,2);
             $table->timestamps();
         });
     }

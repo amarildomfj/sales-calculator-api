@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 
-class IndirectCostSeeder extends Seeder
+class ProductAdditionalProductSeeder extends Seeder
 {
     /**
      * Run the database seeds.

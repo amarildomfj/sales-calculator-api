@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\RawMaterial;
 use Illuminate\Database\Seeder;
 
 class RawMaterialSeeder extends Seeder
@@ -13,6 +14,6 @@ class RawMaterialSeeder extends Seeder
      */
     public function run()
     {
-        //
+        RawMaterial::factory()->count(20)->create();
     }
 }

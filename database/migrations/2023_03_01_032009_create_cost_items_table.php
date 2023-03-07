@@ -14,7 +14,13 @@ class CreateCostItemsTable extends Migration
     public function up()
     {
         Schema::create('cost_items', function (Blueprint $table) {
+            
             $table->id();
+            $table->string('name');
+            $table->double('amount', 8, 2);
+            $table->integer('quantity');
+            $table->double('unit_value', 8, 2);
+            $table->string('measurement_unit');
             $table->timestamps();
         });
     }

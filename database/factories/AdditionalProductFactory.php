@@ -14,7 +14,8 @@ class AdditionalProductFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => $this->faker->name(),
+            'amount' => 0.0,
         ];
     }
 }

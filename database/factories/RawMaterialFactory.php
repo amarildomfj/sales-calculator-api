@@ -13,8 +13,18 @@ class RawMaterialFactory extends Factory
      */
     public function definition()
     {
+        $arrMeasurementUnit = ['un','ml','g'];
+        $amount = rand(1,5000);
+        $quantity = rand(1,200);
+        $unitValue = $amount / $quantity;
+        $measurementUnit = rand(0,2);  
+
         return [
-            //
+            'name' => $this->faker->name(),
+            'amount' => $amount,
+            'quantity' => $quantity,
+            'unit_value' => $unitValue,
+            'measurement_unit' => $arrMeasurementUnit[$measurementUnit] 
         ];
     }
 }
